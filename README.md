@@ -6,13 +6,23 @@ survey_guerilla - Group 3 - SKAD - Sarah Sprague, Kenny Luk, Adam Willis, Dan Be
 Our MVP will be a website that allows users to create and take (single-question)
 surveys. There will be some data collection, collation and presentation
 involved.  It will feature a red and black color-scheme reminiscent of
-guerilla's past.
+guerillas past.
 
 !["guerilla gorilla"](http://t0.gstatic.com/images?q=tbn:ANd9GcR6rVoBS1WJFq5Ctj_14nqLwmuye3UMVtP5TFxr--2_0_6ONeLHvQ)
 
 ##TRELLO USER STORIES
 
-["Trelllllllo"](https://trello.com/b/nbfrwTdR)
+["Trellollollolo"](https://trello.com/b/nbfrwTdR)
+
+##WIRE FRAMES
+
+!["ONE"](http://i.imgur.com/vmwe4W1.jpg)
+!["TWO"](http://i.imgur.com/7BQ0tcq.jpg)
+!["THREE"](http://i.imgur.com/NWsdNsj.jpg)
+
+##TEAM DYNAMIC AND WORKFLOW
+
+AS WE GO ALONG
 
 ##SCHEMA
 
