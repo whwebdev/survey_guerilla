@@ -2,8 +2,8 @@ class User < ActiveRecord::Base
   include BCrypt
   validates :username, uniqueness: true
   has_many :albums
-  has_many :comments
-
+  has_ many :comments
+  has_secure_password
 
   def password
     Password.new(hashword)
