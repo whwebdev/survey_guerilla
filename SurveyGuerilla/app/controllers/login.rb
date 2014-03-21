@@ -1,12 +1,9 @@
 enable :sessions
 
-
-
 post '/' do
   @user = User.find_by(username: params[:username])
   # @user = User.authenticate(username: params[:username], password: params[:password])
   if @user && @user.authenticate(params[:password])
-    p 'hello'
     session[:user] = @user
     redirect to '/upload'
   else
