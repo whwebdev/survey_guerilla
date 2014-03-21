@@ -1,9 +1,20 @@
-survey_guerilla
+survey_guerilla - Group 3 - SKAD - Sarah Sprague, Kenny Luk, Adam Willis, Dan Benson
 ===============
 
-Group 3 Mini Project
+##Project MVP - Survey Guerilla:
 
-#SCHEMA
+Our MVP will be a website that allows users to create and take (single-question)
+surveys. There will be some data collection, collation and presentation
+involved.  It will feature a red and black color-scheme reminiscent of
+guerilla's past.
+
+!["guerilla gorilla"](http://t0.gstatic.com/images?q=tbn:ANd9GcR6rVoBS1WJFq5Ctj_14nqLwmuye3UMVtP5TFxr--2_0_6ONeLHvQ)
+
+##TRELLO USER STORIES
+
+["Trelllllllo"](https://trello.com/b/nbfrwTdR)
+
+##SCHEMA
 
 03/21/14 11:53am
 !["Database Schema"](http://i.imgur.com/e317UBF.png)
