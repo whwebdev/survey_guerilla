@@ -1,33 +1,33 @@
-enable :sessions
+# enable :sessions
 
-get '/' do
-  erb :index
-end
+# get '/' do
+#   erb :index
+# end
 
-#------- Users -----------
+# #------- Users -----------
 
-# GET /cats/new        new     show the form to create a new cat
-get '/users/login' do
+# # GET /cats/new        new     show the form to create a new cat
+# get '/users/login' do
 
-end
+# end
 
-# POST /cats           create  create a new cat
-post '/users' do
+# # POST /cats           create  create a new cat
+# post '/users' do
 
-end
+# end
 
-# GET /cats/:id        show    show a user and
-get '/users/:id' do
+# # GET /cats/:id        show    show a user and
+# get '/users/:id' do
 
-end
+# end
 
-#-------- Answering Surveys -----
+# #-------- Answering Surveys -----
 
-#Post /answers(kinda)   Creating new answers to questions
-Post '/survey/:id/submit' do
+# #Post /answers(kinda)   Creating new answers to questions
+# Post '/survey/:id/submit' do
 
-end
-#Get /answers (kinda)   listing(but really counting) answers to questions (by survey)
-Get '/survey/:id/results' do
+# end
+# #Get /answers (kinda)   listing(but really counting) answers to questions (by survey)
+# Get '/survey/:id/results' do
 
-end
+# end

@@ -9,19 +9,27 @@ users.times do
   User.create(username: Faker::Internet.user_name, hashword: Faker::Internet.password, email: Faker::Internet.email )
 end
 
-
 surveys.times do |i|
-  Survey.create(user_id: i, title: Faker::Lorem.sentence)
+  Survey.create(creator_id: i+1, title: Faker::Lorem.sentence)
 end
 
 
-questions.times do |i|
-   Question.create(survey_id: valid_survey_ids.sample, text: Faker::Lorem.sentence)
+Survey.all.each do |s|
+   Question.create(survey_id: s.id, text: "survey #{s.id} question 1")
+   Question.create(survey_id: s.id, text: "survey #{s.id} question 2")
+   Question.create(survey_id: s.id, text: "survey #{s.id} question 3")
+   Question.create(survey_id: s.id, text: "survey #{s.id} question 4")
 end
 
-valid_questions_ids = (1..questions).to_a
-
-answers.times do
-  Answer.create(question_id: valid_questions_ids.sample, text: Faker::Lorem.sentence)
+Question.all.each do |q|
+   Answer.create(question_id: q.id, text: "question #{q.id} answer 1")
+   Answer.create(question_id: q.id, text: "question #{q.id} answer 2")
+   Answer.create(question_id: q.id, text: "question #{q.id} answer 3")
+   Answer.create(question_id: q.id, text: "question #{q.id} answer 4")
 end
 
+# Survey.each_with_index do |survey, index|
+#   survey.answer = Answer[index]
+# end
+
+# Answers.all << User.all

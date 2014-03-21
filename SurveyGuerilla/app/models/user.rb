@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :surveys
+  has_and_belongs_to_many :taken_surveys, join_table: "surveys_users", class_name: "Survey"
   has_and_belongs_to_many :answers
 
+  has_many :created_surveys, class_name: "Survey",
+                             foreign_key: "creator_id"
   include BCrypt
   validates :username, uniqueness: true
 

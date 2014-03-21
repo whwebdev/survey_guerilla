@@ -9,7 +9,7 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :surveys do |t|
-      t.belongs_to :user
+      t.integer :creator_id
       t.string :title
 
       t.timestamps
