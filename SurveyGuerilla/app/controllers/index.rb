@@ -1,8 +1,8 @@
-# enable :sessions
+enable :sessions
 
-# get '/' do
-#   erb :index
-# end
+get '/' do
+  erb :index
+end
 
 # #------- Users -----------
 
