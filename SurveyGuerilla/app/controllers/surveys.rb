@@ -1,36 +1,36 @@
-# GET /cats            index   show a list of cats
-get '/surveys' do
+# # GET /cats            index   show a list of cats
+# get '/surveys' do
 
-end
+# end
 
-# GET /cats/new        new     show the form to create a new cat
-get '/surveys/new' do
+# # GET /cats/new        new     show the form to create a new cat
+# get '/surveys/new' do
 
-end
+# end
 
-# POST /cats           create  create a new cat
-post '/surveys' do
+# # POST /cats           create  create a new cat
+# post '/surveys' do
 
-end
+# end
 
-# GET /cats/:id/edit   edit    show the form to edit an existing cat
-get '/surveys/:id/edit' do
+# # GET /cats/:id/edit   edit    show the form to edit an existing cat
+# get '/surveys/:id/edit' do
 
-end
+# end
 
-# GET /cats/:id        show    show an individual cat
-get '/surveys/:id' do
+# # GET /cats/:id        show    show an individual cat
+# get '/surveys/:id' do
 
-end
+# end
 
-# PUT /cats/:id        update  change the properties of an existing cat
-put '/surveys/:id' do
+# # PUT /cats/:id        update  change the properties of an existing cat
+# put '/surveys/:id' do
 
-do
+# do
 
-# DELETE /cats/:id     delete  delete an existing cat
-delete 'surveys/:id' do
+# # DELETE /cats/:id     delete  delete an existing cat
+# delete 'surveys/:id' do
 
-end
+# end
 
 
