@@ -12,9 +12,15 @@ end
 # end
 
 # # POST /cats           create  create a new cat
-# post '/surveys' do
-
-# end
+post '/surveys' do
+  survey = Survey.create(creator_id: session[:user_id], title: params[:survey][:title])
+  params[:survey][:questions].each do |question|
+    question = Question.create(survey_id: survey.id, text: question[:question])
+    question[:options].each do |option|
+      Answer.create(question_id: question.id, text: option)
+    end
+  end
+end
 
 # # GET /cats/:id/edit   edit    show the form to edit an existing cat
 get '/surveys/:id/edit' do
