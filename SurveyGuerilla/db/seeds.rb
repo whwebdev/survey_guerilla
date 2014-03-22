@@ -28,8 +28,10 @@ Question.all.each do |q|
    Answer.create(question_id: q.id, text: "question #{q.id} answer 4")
 end
 
-# Survey.each_with_index do |survey, index|
-#   survey.answer = Answer[index]
-# end
 
-# Answers.all << User.all
+# seed associations
+# User.all.each do |user|
+#   Answer.all.each_slice(4) do |four_answers|
+#     user.chosen_answers << four_answers.sample
+#   end
+# end
