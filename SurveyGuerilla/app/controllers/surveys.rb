@@ -1,9 +1,10 @@
 
 # # GET /cats            index   show a list of cats
-# get '/surveys' do
-#   @surveys = Survey.all
-#   erb :
-# end
+get '/surveys' do
+  check_logged_in
+  @surveys = Survey.all
+  erb :survey_list
+end
 
 # # GET /cats/new        new     show the form to create a new cat
 # get '/surveys/new' do
@@ -27,14 +28,12 @@ get '/surveys/:id' do
   erb :survey
 end
 
-# PUT /cats/:id        update  change the properties of an existing cat
+# POST /cats/:id        save a new cat
 post '/surveys/:id' do
   session[:user_id] = User.first
   params[:post].values.each do |answer|
     User.find(session[:user_id]).chosen_answers << Answer.find(answer)
   end
-
-
 end
 
 # # PUT /cats/:id        update  change the properties of an existing cat
