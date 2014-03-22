@@ -11,7 +11,7 @@ end
 get '/users/profile' do
   check_logged_in
   current_user
-  erb :user_page
+  erb :user_profile
 end
 
 # #-------- Answering Surveys -----
