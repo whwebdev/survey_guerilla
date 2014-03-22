@@ -6,20 +6,13 @@ end
 
 # #------- Users -----------
 
-# # GET /cats/new        new     show the form to create a new cat
-# get '/users/login' do
-
-# end
-
-# # POST /cats           create  create a new cat
-# post '/users' do
-
-# end
 
 # # GET /cats/:id        show    show a user and
-# get '/users/:id' do
-
-# end
+get '/users/profile' do
+  check_logged_in
+  current_user
+  erb :user_page
+end
 
 # #-------- Answering Surveys -----
 
