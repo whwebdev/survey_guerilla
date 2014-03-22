@@ -7,19 +7,24 @@ get '/surveys' do
 end
 
 # # GET /cats/new        new     show the form to create a new cat
-# get '/surveys/new' do
+get '/surveys/new' do
 
-# end
+erb :new_survey
+end
 
 # # POST /cats           create  create a new cat
 post '/surveys' do
+  p params
   survey = Survey.create(creator_id: session[:user_id], title: params[:survey][:title])
   params[:survey][:questions].each do |question|
-    question = Question.create(survey_id: survey.id, text: question[:question])
+    p question[:options]
+    question_object = Question.create(survey_id: survey.id, text: question[:question])
     question[:options].each do |option|
-      Answer.create(question_id: question.id, text: option)
+      Answer.create(question_id: question_object.id, text: option)
     end
   end
+  current_user
+  erb :user_page
 end
 
 # # GET /cats/:id/edit   edit    show the form to edit an existing cat

@@ -18,7 +18,7 @@ $(document).ready(function() {
   function OptionView() {
     this.view = "<li><input placeholder='Option' type='text'></li>"
     this.renderOption = function(event) {
-      $(event.target).parent().prev().append("<li><input placeholder='Option' type='text'><span><button type='button' id='delete-option'>X</button></li>")
+      $(event.target).parent().prev().append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'><span><button type='button' id='delete-option'>X</button></li>")
     }
   }
 
