@@ -1,7 +1,11 @@
 enable :sessions
 
 get '/' do
-  erb :index
+  if current_user
+    redirect to '/surveys'
+  else
+    erb :index
+  end
 end
 
 # #------- Users -----------
