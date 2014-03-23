@@ -51,11 +51,15 @@ post '/surveys/:id' do
   current_user
   user = User.find(session[:user_id])
   @survey = Survey.find(session[:current_survey_id])
-  user.taken_surveys << @survey
-  params[:post].values.each do |answer_id|
-    user.chosen_answers << Answer.find(answer_id)
+  if params[:post]
+    user.taken_surveys << @survey
+    params[:post].values.each do |answer_id|
+      user.chosen_answers << Answer.find(answer_id)
+    end
+    erb :results
+  else
+    erb :survey
   end
-  erb :results
 end
 
 get 'surveys/:id/results' do

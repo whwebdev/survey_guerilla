@@ -22,4 +22,12 @@ $(function() {
     setTimeout(explode, 500);
   });
 
+  $("form").on("submit", function(event) {
+    $('body').css('background-color', 'black').fadeTo(500);
+    $(".vegas-background").removeAttr("src").fadeTo(500);
+    $("#main").hide();
+    $("#fist").fadeIn(2000);
+    setTimeout(function(){return true;}, 1500);
+  })
+
 });
