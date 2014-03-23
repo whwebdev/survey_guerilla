@@ -1,7 +1,21 @@
 $(document).ready(function() {
 
+  //Active tab selector
+  switch (window.location.pathname) {
+  case '/surveys':
+    $("#menu ul li:nth-child(3)").addClass('pure-menu-selected');
+    break;
+  case '/surveys/new':
+    $("#menu ul li:nth-child(2)").addClass('pure-menu-selected')
+    break;
+  case '/users/profile':
+    $("#menu ul li:nth-child(1)").addClass('pure-menu-selected')
+    break;
+  }
 
 
+
+  //Dynamic form generator
   function QuestionView(){
     this.view = "<li><input type='text' placeholder='Question' name='survey[questions][][question]' /><span><button type='button' id='delete-question'>X</button></span></li>";
     this.renderQuestion = function(){
@@ -72,4 +86,14 @@ $(document).ready(function() {
   //   console.log(e.target)
   // }
 
+
+  //background stuff
+  $(function() {
+    $.vegas({
+      src:'/img/background.jpg'
+    });
+    $.vegas('overlay', {
+      src:'/vegas/overlays/8.png'
+    });
+  });
 });
