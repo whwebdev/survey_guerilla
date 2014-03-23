@@ -54,6 +54,7 @@ post '/surveys/:id' do
     user.chosen_answers << Answer.find(answer_id)
     user.taken_surveys << Survey.find(session[:current_survey_id])
   end
+  @survey = Survey.find(session[:current_survey_id])
   erb :results
 end
 
