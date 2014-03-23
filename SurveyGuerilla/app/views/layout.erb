@@ -27,25 +27,17 @@
 
     <div id="menu">
         <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="#">Survey Guerilla</a>
+            <a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
 
             <ul>
-                <li><a href="/">Home</a></li>
                 <% if session[:user_id] %>
-                <li><a href="/users/<%= session[:user_id] %>">My Albums</a></li>
-                <% end %>
-
-                <li class="menu-item-divided pure-menu-selected">
-                    <a href="/albums">Albums</a>
-                </li>
-
-                <li><a href="/upload">Upload</a></li>
-                <% if session[:user_id] %>
+                <li class='pure-menu-selected'><a href="/users/profile">My Profile</a></li>
+                <li><a href="/surveys/new">Create Form</a></li>
+                <li><a href="/surveys">All Surveys</a></li>
                 <li><a href="/logout">Logout</a></li>
                 <% else %>
-                <li><a href="/">Login</a></li>
+                <li> <a href="/">Login</a></li>
                 <% end %>
-
             </ul>
         </div>
     </div>

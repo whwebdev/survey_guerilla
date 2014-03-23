@@ -8,16 +8,16 @@ end
 
 # # GET /cats/new        new     show the form to create a new cat
 get '/surveys/new' do
-
-erb :new_survey
+  check_logged_in
+  erb :new_survey
 end
 
 # # POST /cats           create  create a new cat
 post '/surveys' do
-  p params
+  # p params
   survey = Survey.create(creator_id: session[:user_id], title: params[:survey][:title])
   params[:survey][:questions].each do |question|
-    p question[:options]
+    # p question[:options]
     question_object = Question.create(survey_id: survey.id, text: question[:question])
     question[:options].each do |option|
       Answer.create(question_id: question_object.id, text: option)
