@@ -14,15 +14,33 @@ $(document).ready(function() {
   }
 
 
-  //Results page
-  $.ajax({
-    type: "POST",
-    dataType: "JSON",
-    url: window.location.pathname,
-    success: function(data) {
-      console.log(data)
-    }
-  });
+// Pie charts (not working)
+//   var questions = $('ol').children('li')
+//   var data = [];
+//   for (var i=0; i < questions.length; i++) {
+//     var counts = $(questions).find('.takersCount')
+//     var answers = $(questions).find('.answer')
+//     for (var i=0; i < answers.length; i++) {
+//       data.push([answers[i], counts[i]])
+//     }
+
+//     var plot1 = jQuery.jqplot('chartdiv', [data], {
+//     seriesDefaults: {
+//       // Make this a pie chart.
+//       renderer: jQuery.jqplot.PieRenderer,
+//       rendererOptions: {
+//         // Put data labels on the pie slices.
+//         // By default, labels show the percentage of the slice.
+//         showDataLabels: true
+//       }
+//     },
+//     legend: {
+//       show: true,
+//       location: 'e'
+//     }
+//     });
+
+// }
   // $.jqplot('chartdiv', [
   //   [
   //     [1, 2],
@@ -33,32 +51,38 @@ $(document).ready(function() {
   //     [11, 219.9]
   //   ]
   // ]);
-  var data = [
-    ['Heavy Industry', 12],
-    ['Retail', 9],
-    ['Light Industry', 14],
-    ['Out of home', 16],
-    ['Commuting', 7],
-    ['Orientation', 9]
-  ];
+  // var data = [
+  //   ['
+  //   Heavy Industry ', 12],
+  //   ['
+  //   Retail ', 9],
+  //   ['
+  //   Light Industry ', 14],
+  //   ['
+  //   Out of home ', 16],
+  //   ['
+  //   Commuting ', 7],
+  //   ['
+  //   Orientation ', 9]
+  // ];
 
 
 
-  var plot1 = jQuery.jqplot('chartdiv', [data], {
-    seriesDefaults: {
-      // Make this a pie chart.
-      renderer: jQuery.jqplot.PieRenderer,
-      rendererOptions: {
-        // Put data labels on the pie slices.
-        // By default, labels show the percentage of the slice.
-        showDataLabels: true
-      }
-    },
-    legend: {
-      show: true,
-      location: 'e'
-    }
-  });
+  // var plot1 = jQuery.jqplot('chartdiv', [data], {
+  //   seriesDefaults: {
+  //     // Make this a pie chart.
+  //     renderer: jQuery.jqplot.PieRenderer,
+  //     rendererOptions: {
+  //       // Put data labels on the pie slices.
+  //       // By default, labels show the percentage of the slice.
+  //       showDataLabels: true
+  //     }
+  //   },
+  //   legend: {
+  //     show: true,
+  //     location: 'e'
+  //   }
+  // });
 
 
   //Dynamic form generator
@@ -69,7 +93,7 @@ $(document).ready(function() {
       $("#question_list").append(this.view);
       $("#question_list > li").append("<ul class='options'>");
       $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'></li>");
-      $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'></li>");
+      $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text '></li>");
       $("#question_list > li").last().append("<li><button type='button' id='new-option'>Add new option</button></li></ul>");
       // $("#question_list").append("</ul>");
       // $("#question_list").append("</li>");

@@ -47,7 +47,8 @@ get '/surveys/:id' do
 end
 
 # POST /cats/:id        save a new cat
-post '/surveys/:id' do
+post '/surveys/' do
+  content_type :json
   current_user
   user = User.find(session[:user_id])
   @survey = Survey.find(session[:current_survey_id])
@@ -58,10 +59,7 @@ post '/surveys/:id' do
   erb :results
 end
 
-get 'surveys/:id/results' do
 
-
-end
 
 # # PUT /cats/:id        update  change the properties of an existing cat
 # put '/surveys/:id' do

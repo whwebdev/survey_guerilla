@@ -8,12 +8,12 @@
     <ol>
       <% @survey.questions.each do |question|%>
       <li> To the question: <br>
-        <%=question.text%>:<br>
+        <span class='question'><%=question.text%></span>:<br>
         <ul>
           <% question.answers.each do |answer| %>
-          <li><%=answer.survey_takers.count%> revolutionary(s) answered <%=answer.text%>.</li>
+          <li><span class='takersCount'><%=answer.survey_takers.count%></span> revolutionary(s) answered <span class='answer'><%=answer.text%></span>.</li>
           <%end %>
-          <div id="chartdiv" style="height:400px;width:300px; "></div>
+          <!-- <div id="chartdiv" style="height:400px;width:300px; "></div> -->
         </ul>
       </li>
       <%end%>
