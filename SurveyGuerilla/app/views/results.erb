@@ -13,6 +13,7 @@
           <% question.answers.each do |answer| %>
           <li><%=answer.survey_takers.count%> revolutionary(s) answered <%=answer.text%>.</li>
           <%end %>
+          <div id="chartdiv" style="height:400px;width:300px; "></div>
         </ul>
       </li>
       <%end%>

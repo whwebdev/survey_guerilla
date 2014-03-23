@@ -1,4 +1,4 @@
-
+require 'json'
 # # GET /cats            index   show a list of cats
 get '/surveys' do
   check_logged_in
@@ -56,6 +56,11 @@ post '/surveys/:id' do
     user.chosen_answers << Answer.find(answer_id)
   end
   erb :results
+end
+
+get 'surveys/:id/results' do
+
+
 end
 
 # # PUT /cats/:id        update  change the properties of an existing cat

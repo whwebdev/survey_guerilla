@@ -2,23 +2,70 @@ $(document).ready(function() {
 
   //Active tab selector
   switch (window.location.pathname) {
-  case '/surveys':
-    $("#menu ul li:nth-child(3)").addClass('pure-menu-selected');
-    break;
-  case '/surveys/new':
-    $("#menu ul li:nth-child(2)").addClass('pure-menu-selected')
-    break;
-  case '/users/profile':
-    $("#menu ul li:nth-child(1)").addClass('pure-menu-selected')
-    break;
+    case '/surveys':
+      $("#menu ul li:nth-child(3)").addClass('pure-menu-selected');
+      break;
+    case '/surveys/new':
+      $("#menu ul li:nth-child(2)").addClass('pure-menu-selected')
+      break;
+    case '/users/profile':
+      $("#menu ul li:nth-child(1)").addClass('pure-menu-selected')
+      break;
   }
 
 
+  //Results page
+  $.ajax({
+    type: "POST",
+    dataType: "JSON",
+    url: window.location.pathname,
+    success: function(data) {
+      console.log(data)
+    }
+  });
+  // $.jqplot('chartdiv', [
+  //   [
+  //     [1, 2],
+  //     [3, 5.12],
+  //     [5, 13.1],
+  //     [7, 33.6],
+  //     [9, 85.9],
+  //     [11, 219.9]
+  //   ]
+  // ]);
+  var data = [
+    ['Heavy Industry', 12],
+    ['Retail', 9],
+    ['Light Industry', 14],
+    ['Out of home', 16],
+    ['Commuting', 7],
+    ['Orientation', 9]
+  ];
+
+
+
+  var plot1 = jQuery.jqplot('chartdiv', [data], {
+    seriesDefaults: {
+      // Make this a pie chart.
+      renderer: jQuery.jqplot.PieRenderer,
+      rendererOptions: {
+        // Put data labels on the pie slices.
+        // By default, labels show the percentage of the slice.
+        showDataLabels: true
+      }
+    },
+    legend: {
+      show: true,
+      location: 'e'
+    }
+  });
+
 
   //Dynamic form generator
-  function QuestionView(){
+
+  function QuestionView() {
     this.view = "<li><input type='text' placeholder='Question' name='survey[questions][][question]' /><span><button type='button' id='delete-question'>X</button></span></li>";
-    this.renderQuestion = function(){
+    this.renderQuestion = function() {
       $("#question_list").append(this.view);
       $("#question_list > li").append("<ul class='options'>");
       $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'></li>");
@@ -37,7 +84,7 @@ $(document).ready(function() {
   }
 
 
-  function FormController(){
+  function FormController() {
 
     this.addQuestion = function() {
       var view = new QuestionView();
@@ -67,17 +114,17 @@ $(document).ready(function() {
 
   var controller = new FormController();
   controller.bindAddQuestionEvent();
-  $("form").on("click", function(event){
-    if (event.target.id == 'new-option'){
+  $("form").on("click", function(event) {
+    if (event.target.id == 'new-option') {
       view = new OptionView();
       view.renderOption(event);
     }
-    if (event.target.id == 'delete-option'){
+    if (event.target.id == 'delete-option') {
       console.log($(event.target).parent().prev())
       $(event.target).parent().parent().remove();
     }
 
-    if (event.target.id == 'delete-question'){
+    if (event.target.id == 'delete-question') {
       console.log($(event.target).parent().parent())
       $(event.target).parent().parent().remove();
     }
@@ -90,10 +137,10 @@ $(document).ready(function() {
   //background stuff
   $(function() {
     $.vegas({
-      src:'/img/background.jpg'
+      src: '/img/background.jpg'
     });
     $.vegas('overlay', {
-      src:'/vegas/overlays/8.png'
+      src: '/vegas/overlays/8.png'
     });
   });
 });
