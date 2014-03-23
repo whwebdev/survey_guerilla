@@ -1,17 +1,25 @@
-<h1><%= @user.username %></h1>
-<div id="created_surveys">
-  <p>Created Surveys</p>
-  <ol>
-    <% @user.created_surveys.each do |survey| %>
-      <li><%= survey.title unless survey.nil? %></li>
-    <% end %>
-  </ol>
-</div>
-<div id="taken_surveys">
-  <p>Taken Surveys</p>
-  <ol>
-    <% @user.taken_surveys.each do |survey| %>
-      <li><%= survey.title unless survey.nil? %></li>
-    <% end %>
-  </ol>
+<div id="main">
+  <div class="header">
+    <h1>survey guerilla</h1>
+    <h2>join the information revolucion</h2>
+  </div>
+  <div class="content">
+    <h1><%= @user.username %></h1>
+    <div id="created_surveys">
+      <p>Created Surveys</p>
+      <ol>
+        <% @user.created_surveys.each do |survey| %>
+        <li><%= survey.title unless survey.nil? %></li>
+        <% end %>
+      </ol>
+    </div>
+    <div id="taken_surveys">
+      <p>Taken Surveys</p>
+      <ol>
+        <% @user.taken_surveys.each do |survey| %>
+        <li><%= survey.title unless survey.nil? %></li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
 </div>

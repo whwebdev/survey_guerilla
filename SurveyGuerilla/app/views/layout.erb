@@ -24,28 +24,29 @@
 <body>
 
 <div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+<!-- Hamburger icon -->
+<span></span>
+</a>
 
-    <div id="menu">
-        <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
+<div id="menu">
+<div class="pure-menu pure-menu-open">
+<a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
 
-            <ul>
-                <% if session[:user_id] %>
-                <li><a href="/users/profile">My Profile</a></li>
-                <li><a href="/surveys/new">Create Form</a></li>
-                <li><a href="/surveys">All Surveys</a></li>
-                <li><a href="/logout">Logout</a></li>
-                <% else %>
-                <li> <a href="/">Login</a></li>
-                <% end %>
-            </ul>
-        </div>
-    </div>
+<ul>
+<% if session[:user_id] %>
+<li><a href="/users/profile">My Profile</a></li>
+<li><a href="/surveys/new">Create Form</a></li>
+<li><a href="/surveys">All Surveys</a></li>
+<li><a href="/logout">Logout</a></li>
+<% else %>
+<li> <a href="/">Login</a></li>
+<% end %>
+</ul>
+</div>
+</div>
+</div>
 
 <%= yield %>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

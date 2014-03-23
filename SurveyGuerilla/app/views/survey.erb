@@ -1,26 +1,25 @@
-    <div id="main">
-        <div class="header">
-            <h1><%= @survey.title %></h1>
-           <!--  <h2> @survey.description </h2> -->
-        </div>
+<div id="main">
+<div class="header">
+<h1><%= @survey.title %></h1>
+<!--  <h2> @survey.description </h2> -->
+</div>
+<div class="content">
+<form action="" method="POST">
+<ul>
+<% @survey.questions.each do |q| %>
+<li><%= q.text %></li>
 
-        <div class="content">
-            <form action="" method="POST">
-                <ul>
-                    <% @survey.questions.each do |q| %>
-                        <li><%= q.text %></li>
-
-                                <% q.answers.each_with_index do |a,i| %>
-                                    <input type="radio" name="post[answer_<%= q.id %>]" value="<%= a.id %>"><%= a.text %>
-                                    <br>
-                                <% end %>
-                                <br>
-                                <br>
-                    <% end %>
-                </ul>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
+<% q.answers.each_with_index do |a,i| %>
+<input type="radio" name="post[answer_<%= q.id %>]" value="<%= a.id %>"><%= a.text %>
+<br>
+<% end %>
+<br>
+<br>
+<% end %>
+</ul>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
 </div>
 
