@@ -1,60 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-<title>Survey Guerilla</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
-<!--[if lte IE 8]>
-<link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<link rel="stylesheet" href="<%= url("/css/layouts/side-menu.css") %>">
-<link rel="stylesheet" href="<%= url("/css/layouts/basic.css") %>">
-<link rel="stylesheet" href="/fonts/metro_regular_macroman/stylesheet.css">
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="/vegas/jquery.vegas.css" />
-<link rel="stylesheet" href="/css/application.css">
-<!--<![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Survey Guerilla</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="<%= url("/css/layouts/side-menu.css") %>">
+    <link rel="stylesheet" href="<%= url("/css/layouts/basic.css") %>">
+    <link rel="stylesheet" href="<%= url("/css/jquery.jqplot.min.css") %>">
+    <link rel="stylesheet" href="/fonts/metro_regular_macroman/stylesheet.css">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="/vegas/jquery.vegas.css" />
+    <link rel="stylesheet" href="/css/application.css">
+    <!--<![endif]-->
 </head>
-
 <body>
-
-<div id="layout">
+    <div id="layout">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
+    <!-- Hamburger icon -->
+    <span></span>
     </a>
-
     <div id="menu">
-        <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
-
-            <ul>
-                <% if session[:user_id] %>
-                <li><a href="/users/profile">My Profile</a></li>
-                <li><a href="/surveys/new">Create Form</a></li>
-                <li><a href="/surveys">All Surveys</a></li>
-                <li><a href="/logout">Logout</a></li>
-                <% else %>
-                <li> <a href="/">Login</a></li>
-                <% end %>
-            </ul>
-        </div>
+    <div class="pure-menu pure-menu-open">
+    <a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
+    <ul>
+    <% if session[:user_id] %>
+    <li><a href="/users/profile">My Profile</a></li>
+    <li><a href="/surveys/new">Create Form</a></li>
+    <li><a href="/surveys">All Surveys</a></li>
+    <li><a href="/logout">Logout</a></li>
+    <% else %>
+    <li> <a href="/">Login</a></li>
+    <% end %>
+    </ul>
     </div>
-
-<%= yield %>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/js/ui.js"></script>
-<script
-  type="text/javascript"
-  src="/vegas/jquery.vegas.js">
-</script>
-<script src="/js/application.js"></script>
+    </div>
+    </div>
+    <%= yield %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/ui.js"></script>
+    <script
+    type="text/javascript"
+    src="/vegas/jquery.vegas.js">
+    </script>
+    <script src="/js/application.js"></script>
+    <script src="/js/excanvas.min.js"></script>
+    <script src="/js/jquery.jqplot.min.js"></script>
+    <script src="/js/jqplot.pieRenderer.min.js"></script>
 </body>
 </html>
-

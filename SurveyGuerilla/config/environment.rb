@@ -20,6 +20,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require 'pry'
 require 'erb'
+require 'json'
 
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
