@@ -1,6 +1,18 @@
-#layout {
+.pure-form-stacked {
+  float: left;
+  background: #ddd;
+  width: 280px;
+  padding: 30px 5px 30px 20px;
+  margin: 50px 0 0 25px;
+  border: 1px #000 solid;
 
 }
 ul li {
   list-style-type: none;
+}
+
+.content {
+  background: #cc0000;
+  width: 700px;
+  height: 700px;
 }
