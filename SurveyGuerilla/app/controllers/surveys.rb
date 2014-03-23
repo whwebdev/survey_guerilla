@@ -50,11 +50,11 @@ end
 post '/surveys/:id' do
   current_user
   user = User.find(session[:user_id])
+  @survey = Survey.find(session[:current_survey_id])
+  user.taken_surveys << @survey
   params[:post].values.each do |answer_id|
     user.chosen_answers << Answer.find(answer_id)
-    user.taken_surveys << Survey.find(session[:current_survey_id])
   end
-  @survey = Survey.find(session[:current_survey_id])
   erb :results
 end
 

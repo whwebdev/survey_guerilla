@@ -1,24 +1,21 @@
 <div id="main">
-        <div class="header">
-            <h1>survey guerilla</h1>
-            <h2>join the information revolucion</h2>
-        </div>
-
-        <div class="content">
-
-<h1>Survey Results for <%=@survey.title%></h1>
-<ol>
-  <% @survey.questions.each do |question|%>
-    <li> To the question: <br>
-      <%=question.text%>:<br>
-      <ul>
-      <% question.answers.each do |answer| %>
-        <li><%=answer.survey_takers.count%> revolutionary(s) answered <%=answer.text%>.</li>
-      <%end %>
-      </ul>
-    </li>
-  <%end%>
-</ol>
-
-</div>
+  <div class="header">
+    <h1>survey guerilla</h1>
+    <h2>join the information revolucion</h2>
+  </div>
+  <div class="content">
+    <h1>Survey Results for <%=@survey.title%></h1>
+    <ol>
+      <% @survey.questions.each do |question|%>
+      <li> To the question: <br>
+        <%=question.text%>:<br>
+        <ul>
+          <% question.answers.each do |answer| %>
+          <li><%=answer.survey_takers.count%> revolutionary(s) answered <%=answer.text%>.</li>
+          <%end %>
+        </ul>
+      </li>
+      <%end%>
+    </ol>
+  </div>
 </div>
