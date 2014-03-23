@@ -36,7 +36,7 @@ end
 # # GET /cats/:id        show    show an individual cat
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
-  if current_user == @survey.creator_id
+  if current_user.id == @survey.creator_id
     erb :results
   elsif current_user.taken_surveys.include?(@survey)
     erb :results
