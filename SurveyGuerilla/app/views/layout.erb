@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<%= url("/css/layouts/basic.css") %>">
     <!-- <link rel="stylesheet" href="<%= url("/css/jquery.jqplot.min.css") %>"> -->
     <link rel="stylesheet" href="/fonts/metro_regular_macroman/stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
     <link
     rel="stylesheet"
     type="text/css"
@@ -30,7 +31,7 @@
     </a>
     <div id="menu">
     <div class="pure-menu pure-menu-open">
-    <a class="pure-menu-heading" href="/">Survey<br>Guerilla</a>
+    <a class="pure-menu-heading" href="/"><span class="color_survey">Survey</span><br><span class="color_guerilla">Guerilla</span></a>
     <ul>
     <% if session[:user_id] %>
     <li><a href="/users/profile">My Profile</a></li>
