@@ -1,34 +1,124 @@
 body {
   font-family:'metroregular';
 }
-#menu {
-  font-size: 16px;
-  width: 225px;
-}
+
 .header {
   padding-top: 5px;
-  background: #aaa;
+  background: #36492f;
 }
+
+.header h1{
+ color: #000;
+ text-shadow: 2px 2px #ff0000;
+}
+
+.color_survey {
+  color: #000;
+}
+
+.color_guerilla {
+  color: #FF0000;
+  text-shadow: 4px 4px #000;
+}
+
 .pure-form-stacked {
   float: left;
-  background: #ddd;
+  background-image: url('../img/camo.jpg');
   width: 280px;
   padding: 20px 5px 20px 20px;
   margin: 50px 0 0 25px;
   border: 1px #000 solid;
 }
+
 .pure-button-primary {
   background: #777;
 }
+
 ul li {
   list-style-type: none;
 }
+
 .content {
+  font-family: 'Exo', sans-serif;
+  margin-top: 30px;
   background: #BF0000;
-  width: 700px;
+  width: auto;
+  opacity:0.9;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 #guerilla_gorilla {
   z-index: 2;
   margin: 30px 0 0 0;
   position: relative;
 }
+
+
+
+/*SURVEYS*/
+#survey_list {
+  margin: 20px 0;
+  padding: 10px;
+  background: #222;
+}
+
+#survey_list li {
+  height: 50px;
+}
+
+#survey_list img {
+  width: 70px;
+}
+
+#survey_list a {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  position: relative;
+  top: -10px;
+  left: 15px;
+  padding: 5px;
+}
+
+#survey_list a:hover {
+  color: #FF0000;
+}
+
+/*SURVEY*/
+#survey_questions {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  padding: 5px;
+  width: 600px;
+
+}
+
+.content form {
+  background: #222;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+
+
+/*MENU BAR*/
+#menu {
+  font-size: 16px;
+  width: 225px;
+}
+
+#menu .pure-menu-heading {
+  background-image: url('../img/camo.jpg');
+}
+
+.pure-menu-open a {
+
+  background-color: #111;
+}
+

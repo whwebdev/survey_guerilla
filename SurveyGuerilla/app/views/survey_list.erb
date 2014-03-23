@@ -1,12 +1,12 @@
 <div id="main">
   <div class="header">
-    <h1>survey guerilla</h1>
-    <h2>join the information revolucion</h2>
+    <h1>Choose a survey</h1>
+
   </div>
   <div class="content">
-    <ul>
+    <ul id="survey_list">
       <% @surveys.each do |survey| %>
-      <li><a href="/surveys/<%=survey.id%>"><%=survey.title%></a></li>
+      <li><img src="/img/gun.png"><a href="/surveys/<%=survey.id%>"><%=survey.title%></a></li>
       <%end%>
     </ul>
   </div>
