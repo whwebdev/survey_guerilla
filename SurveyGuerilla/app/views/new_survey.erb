@@ -1,23 +1,23 @@
-    <div id="main">
-        <div class="header">
-            <h1>Login</h1>
-            <h2>A subtitle for your page goes here</h2>
-        </div>
-
-        <div class="content">
-            <form class="pure-form pure-form-stacked" id="form-creator" method='post' action='/surveys'>
-              Survey Title: <input type="text" name="survey[title]">
-              <br><br>
-              Survey Description: <textarea name="survey[description]"></textarea>
-              <ol id="question_list">
-              </ol>
-
-              <button type="button" id="new-question" class="new pure-button pure-button-primary">New Question</button>
-              <input type="submit" value="submit">
-            </form>
-
-
-        </div>
-    </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+<div class="content">
+  <h1>New survey</h1>
+  <form action="/surveys" method='post'>
+    Title: <input type="text" name="survey[title]">
+    <br>
+    Description: <input type="textarea" name="survey[description]">
+    <ol class="question_list">
+      <li>
+        Question: <input type="text" name="survey[questions][][question]">
+        <img src="/img/Military-Grenade-icon.png" class="delete_question">
+        <ul>
+          <li>Answer: <input type="text" name="survey[questions][][options][]"> <img src="/img/Military-Grenade-icon.png" class="delete_option"></li>
+          <li>Answer: <input type="text" name="survey[questions][][options][]"> <img src="/img/Military-Grenade-icon.png" class="delete_option"></li>
+          <button class="add_response" type="button">Add response</button>
+        </ul>
+      </li>
+    </ol>
+    <button class="add_question"type="button">Add question</button>
+    <input type="submit" value="submit">
+    </form>
 </div>
-

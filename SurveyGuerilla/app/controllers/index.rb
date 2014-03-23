@@ -28,3 +28,6 @@ end
 # Get '/survey/:id/results' do
 
 # end
+get '/temp/alt_survey' do
+  erb :alt_survey_create_form
+end

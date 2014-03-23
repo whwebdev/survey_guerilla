@@ -15,14 +15,14 @@ $(document).ready(function() {
 
 
   //Results page
-  $.ajax({
-    type: "POST",
-    dataType: "JSON",
-    url: window.location.pathname,
-    success: function(data) {
-      console.log(data)
-    }
-  });
+  // $.ajax({
+  //   type: "POST",
+  //   dataType: "JSON",
+  //   url: window.location.pathname,
+  //   success: function(data) {
+  //     console.log(data)
+  //   }
+  // });
   // $.jqplot('chartdiv', [
   //   [
   //     [1, 2],
@@ -33,32 +33,32 @@ $(document).ready(function() {
   //     [11, 219.9]
   //   ]
   // ]);
-  var data = [
-    ['Heavy Industry', 12],
-    ['Retail', 9],
-    ['Light Industry', 14],
-    ['Out of home', 16],
-    ['Commuting', 7],
-    ['Orientation', 9]
-  ];
+  // var data = [
+  //   ['Heavy Industry', 12],
+  //   ['Retail', 9],
+  //   ['Light Industry', 14],
+  //   ['Out of home', 16],
+  //   ['Commuting', 7],
+  //   ['Orientation', 9]
+  // ];
 
 
 
-  var plot1 = jQuery.jqplot('chartdiv', [data], {
-    seriesDefaults: {
-      // Make this a pie chart.
-      renderer: jQuery.jqplot.PieRenderer,
-      rendererOptions: {
-        // Put data labels on the pie slices.
-        // By default, labels show the percentage of the slice.
-        showDataLabels: true
-      }
-    },
-    legend: {
-      show: true,
-      location: 'e'
-    }
-  });
+  // var plot1 = jQuery.jqplot('chartdiv', [data], {
+  //   seriesDefaults: {
+  //     // Make this a pie chart.
+  //     renderer: jQuery.jqplot.PieRenderer,
+  //     rendererOptions: {
+  //       // Put data labels on the pie slices.
+  //       // By default, labels show the percentage of the slice.
+  //       showDataLabels: true
+  //     }
+  //   },
+  //   legend: {
+  //     show: true,
+  //     location: 'e'
+  //   }
+  // });
 
 
   //Dynamic form generator
