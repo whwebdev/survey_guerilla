@@ -36,15 +36,25 @@ end
 # # GET /cats/:id        show    show an individual cat
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
-  erb :survey
+  if current_user == @survey.creator_id
+    erb :results
+  elsif current_user.taken_surveys.include?(@survey)
+    erb :results
+  else
+    session[:current_survey_id] = @survey.id
+    erb :survey
+  end
 end
 
 # POST /cats/:id        save a new cat
 post '/surveys/:id' do
-  session[:user_id] = User.first
-  params[:post].values.each do |answer|
-    User.find(session[:user_id]).chosen_answers << Answer.find(answer)
+  current_user
+  user = User.find(session[:user_id])
+  params[:post].values.each do |answer_id|
+    user.chosen_answers << Answer.find(answer_id)
+    user.taken_surveys << Survey.find(session[:current_survey_id])
   end
+  erb :results
 end
 
 # # PUT /cats/:id        update  change the properties of an existing cat
