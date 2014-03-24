@@ -5,13 +5,13 @@
     <!--  <h2> @survey.description </h2> -->
   </div>
   <div class="content">
-    <form action="" method="POST">
+    <form action="" method="POST" id="survey_page">
       <ul>
         <% @survey.questions.each do |q| %>
         <li id="survey_questions"><%= q.text %></li>
 
         <% q.answers.each_with_index do |a,i| %>
-        <input type="radio" name="post[answer_<%= q.id %>]" value="<%= a.id %>"><%= a.text %>
+        <input type="radio" name="post[answer_<%= q.id %>]" value="<%= a.id %>" ><span id="answer_option"><%= a.text %></span>
         <br>
         <% end %>
         <br>

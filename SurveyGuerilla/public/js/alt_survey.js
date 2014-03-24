@@ -26,6 +26,7 @@ $(function() {
     $('body').css('background-color', 'black').fadeTo(500);
     $(".vegas-background").removeAttr("src").fadeTo(500);
     $("#main").hide();
+    $("#fist").animate({width: '120%'}, 5000);
     $("#fist").fadeIn(2000);
     setTimeout(function(){return true;}, 1500);
   })

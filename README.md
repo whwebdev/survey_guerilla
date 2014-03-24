@@ -22,9 +22,16 @@ guerillas past.
 
 ##TEAM DYNAMIC AND WORKFLOW
 
-AS WE GO ALONG
+We all chose an area to pair on (back end, front end) but then switched it up as
+individuals to get exposure to a little bit of everything.
 
 ##SCHEMA
+
+#####03/24/14 08:13am
+(not implemented yet)
+
+!["Database Schema"](http://i.imgur.com/LkDptnL.png)
+
 
 #####03/21/14 07:15pm
 !["Database Schema"](http://i.imgur.com/3xOOD7V.png)

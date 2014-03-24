@@ -4,6 +4,7 @@
     <h2>join the information revolucion</h2>
   </div>
   <div class="content">
+    <div id="user_page">
     <h1><%= @user.username %></h1>
     <div id="created_surveys">
       <p>Created Surveys</p>
@@ -20,6 +21,7 @@
         <li><%= survey.title unless survey.nil? %></li>
         <% end %>
       </ol>
+    </div>
     </div>
   </div>
 </div>
