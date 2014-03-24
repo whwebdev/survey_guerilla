@@ -4,7 +4,9 @@
     <h2>join the information revolucion</h2>
   </div>
   <div class="content">
+  <div id="results_page">
     <h1>Survey Results for <%=@survey.title%></h1>
+
     <ol>
       <% @survey.questions.each do |question|%>
       <li> To the question: <br>
@@ -18,5 +20,6 @@
       </li>
       <%end%>
     </ol>
+    </div>
   </div>
 </div>
