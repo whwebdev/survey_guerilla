@@ -9,7 +9,7 @@ end
 # # GET /cats/new        new     show the form to create a new cat
 get '/surveys/new' do
   check_logged_in
-  erb :new_survey
+  erb :old_new_survey
 end
 
 # # POST /cats           create  create a new cat

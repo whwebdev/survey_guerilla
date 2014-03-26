@@ -10,6 +10,18 @@
               <br><br>
               Survey Description: <textarea name="survey[description]"></textarea>
               <ol id="question_list">
+                <li class="question-template">
+                  <input type='text' placeholder='Question' name='survey[questions][][question]'>
+                  <span><button type='button' id='delete-question'>X</button></span>
+                  <ul class="options">
+                    <li class="option-template">
+                      <input name='survey[questions][][options][]' placeholder='Option' type='text'>
+                    </li>
+                    <li>
+                      <button type='button' id='new-option'>Add new option</button>
+                    </li>
+                  </ul>
+                </li>
               </ol>
 
               <button type="button" id="new-question" class="new pure-button pure-button-primary">New Question</button>

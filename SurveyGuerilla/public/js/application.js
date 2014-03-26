@@ -64,15 +64,24 @@ $(document).ready(function() {
   //Dynamic form generator
 
   function QuestionView() {
-    this.view = "<li><input type='text' placeholder='Question' name='survey[questions][][question]' /><span><button type='button' id='delete-question'>X</button></span></li>";
     this.renderQuestion = function() {
-      $("#question_list").append(this.view);
-      $("#question_list > li").append("<ul class='options'>");
-      $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'></li>");
-      $("#question_list > li").append("<li><input name='survey[questions][][options][]' placeholder='Option' type='text'></li>");
-      $("#question_list > li").last().append("<li><button type='button' id='new-option'>Add new option</button></li></ul>");
-      // $("#question_list").append("</ul>");
-      // $("#question_list").append("</li>");
+      var stringBuffer =[];
+
+      stringBuffer.push("<p>");
+      stringBuffer.push("<h1>Hello world</h1>");
+      stringBuffer.push("</p>");
+
+      $(document).append(stringBuffer.join("\n"));
+      var $questions = $("#question_list");
+      var $template = $questions.find(".question-template");
+      var $newQ = $template.clone();
+      var $newOption = $newQ.find(".option-template").clone();
+      $newOption.removeClass("option-template");
+      $newQ.removeClass("question-template");
+
+      $newQ.find(".options").append($newOption);
+
+      $questions.append($newQ);
     }
   }
 

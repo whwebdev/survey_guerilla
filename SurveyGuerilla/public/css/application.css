@@ -154,3 +154,12 @@ ul li {
   cursor: pointer;
 }
 
+
+
+.question-template {
+  display:none;
+}
+
+.option-template {
+  display:none;
+}
